@@ -19,7 +19,11 @@ describe('Merge Sort', function() {
     expect(mergeSort([])).toEqual([]);
   });
 
+  it('handles a single element array', function(){
+    expect(mergeSort([1])).toEqual([1]);
+  });
+
   it('sorts an array', function() {
-    expect(mergeSort([-100, 20, 1, 0, -9, 100])).toEqual([-100, -9, 0, 1, 20, 100]);
+    expect(mergeSort([-500,-100, 20, 25, 1, 81, 91, 0, -9, 100])).toEqual([-500, -100, -9, 0, 1, 20, 25, 81, 91, 100]);
   });
 });
